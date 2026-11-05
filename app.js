@@ -13,7 +13,6 @@ const FICHIER_DONNEES = 'donnees/operations.json';
 function afficherAccueil() {
   console.log('='.repeat(52));
   console.log('   REGISTRE DES OPÉRATIONS MARAÎCHÈRES');
-  console.log('   AGRI-REGISTRE');
   console.log('   Exploitation maraîchère pédagogique');
   console.log('='.repeat(52));
 }
@@ -32,7 +31,7 @@ function afficherMenu() {
 }
 //ASYNCHRONE DE L'OPTION 1 DE APP.JS
 async function ajouter(operations) {
-  console.log("--- Ajoutez une opération s'il vous plait!!---");
+  console.log("--- Ajoutez une opération ---");
   const id = await demander('Identifiant (ex. O10) : ');
   if (id === null) return;
   const date = await demander('Date (Format. AAAA-MM-JJ) : ');
@@ -78,7 +77,7 @@ function lister(operations) {
   console.log('1. Par identifiant');
   console.log('2. Par parcelle');
   console.log("3. Les opérations d'une culture");
-  const choix = await demander(' Veuillez faire votre choix : ');
+  const choix = await demander('Votre choix : ');
   if (choix === null) return;
 
   if (choix === '1') {
@@ -111,7 +110,7 @@ async function trier(operations) {
   console.log('1. Par coût croissant');
   console.log('2. Par date, de la plus ancienne à la plus récente');
   console.log('3. Par coût décroissant');
-  const choix = await demander(' Veuillez faire votre choix : ');
+  const choix = await demander(' Votre choix : ');
   if (choix === null) return;
 
   if (choix === '1') {
@@ -200,7 +199,7 @@ async function main() {
   let continuer = true;
   while (continuer) {
     afficherMenu();
-    const choix = await demander('Veuillez faire un choix : ');
+    const choix = await demander('Votre choix : ');
     if (choix === null || choix === '0') {
       console.log('AGRI-REGISTRE vous dit au revoir et à bientot !');
       continuer = false;
