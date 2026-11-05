@@ -10,6 +10,8 @@
 |`culture`|culture concernée |texte |non vide |—|tomate|
 |`operation`|type d'opération |texte | appartient à la liste fermée ci-dessous |—|arrosage|
 |`coutFCFA` | cout de l'opération |texte | nombre nul ou positif |—|2000|
+
+
 **Listes de valeurs autorisées** : 
 istes de valeurs autorisées : OPERATIONS = ['semis', 'arrosage', 'désherbage', 'repiquage', 'récolte']
 **Sources** : `SUJET.md` et `donnees/operations.json`
